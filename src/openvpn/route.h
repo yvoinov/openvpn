@@ -33,6 +33,10 @@
 #include "misc.h"
 #include "networking.h"
 
+#if defined(__sun__)
+#define SIOCGIFHWADDR SIOCGIFCONF
+#endif
+
 #ifdef _WIN32
 /*
  * Windows route methods
